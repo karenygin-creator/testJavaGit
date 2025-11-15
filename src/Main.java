@@ -11,6 +11,7 @@ public class Main {
 
         Printable[] massive={new Book("Aboba"),new Book("Aboba1"),new Book("Aboba2")};
         Book.printBooks(massive);
+        String Mickael="ban";
     }
 
 
