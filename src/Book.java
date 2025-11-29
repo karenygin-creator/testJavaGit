@@ -1,19 +1,14 @@
 public class Book implements Printable {
     String name;
+    String author;
 
-    public Book(String name) {
+    public Book(String name, String author) {
         this.name = name;
+        this.author = author;
     }
     @Override
     public void print() {
-        System.out.println("Книга"+name);
+        System.out.println("Книга"+name+"AUthor:"+author);
     }
-    public static void printBooks(Printable[] printables) {
-        for (Printable printable : printables) {
-            if (printable instanceof Book) {
-                Book book = (Book) printable;
-                System.out.println(book.name);
-            }
-        }
-    }
+
 }
