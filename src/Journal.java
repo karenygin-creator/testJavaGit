@@ -1,4 +1,4 @@
-public class Journal implements Printable {
+public class Journal {
     private String name;
 
     public String getName() {
@@ -8,8 +8,5 @@ public class Journal implements Printable {
     public Journal(String name) {
         this.name = name;
     }
-    @Override
-    public void print() {
-        System.out.println(name);
-    }
+
 }

@@ -1,14 +1,33 @@
-public class Book implements Printable {
+public class Book {
+
     String name;
     String author;
+    int pages;
 
-    public Book(String name, String author) {
+    public Book(String name, String author , int pages) {
+
         this.name = name;
         this.author = author;
-    }
-    @Override
-    public void print() {
-        System.out.println("Книга"+name+"AUthor:"+author);
+        this.pages = pages;
     }
 
+    public void print() {
+        System.out.println(name+" "+author+" "+pages);
+
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }

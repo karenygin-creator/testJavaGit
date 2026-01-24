@@ -1,19 +1,21 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.io.*;
+import java.util.*;
+
 public class Main {
 
-    public static void main(String[] args) throws Exception  {
+    public static void main(String[] args) throws Exception {
+        List<Book> books = new ArrayList<>();
+        books.add(new Book("Aboba","Ishak",119));
+        books.add(new Book("Tom","Bub",1990));
+        books.add(new Book("James","Bob",1984));
+        books.add(new Book("Jack","Bob2",1999));
+        books.sort((a,b)->a.getName().compareTo(b.getName()));
+        for (Book book : books) {
+            book.print();
+        }
 
-        Printable[] massive={new Book("Aboba"),new Book("Aboba1"),new Book("Aboba2")};
-        Book.printBooks(massive);
-        String Mickael="ban";
+        System.out.println("Books sorted in ascending order");
+        for (Book book : books) {
+            book.print();
+        }
     }
-
-
-
 }
